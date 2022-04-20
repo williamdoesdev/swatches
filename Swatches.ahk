@@ -3,8 +3,6 @@ SendMode Input
 SetWorkingDir %A_ScriptDir% 
 SetBatchLines, -1
 
-; Menu, Tray, Icon, swatches.ico 
-
 ;Library inclusions
 #Include, lib\neutron.ahk
 #Include, lib\json.ahk
@@ -20,7 +18,7 @@ FileInstall, dropper.svg, dropper.svg
 ;Instantiate Neutron window
 window := new NeutronWindow()
 window.Load("index.html")
-window.Show()
+window.Show("w400 h120")
 
 ;Global state
 global colors := []
