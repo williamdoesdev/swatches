@@ -44,18 +44,18 @@
 .container .flexbox .color-container input {
   background: #545454;
   color: #fff;
-  width: 60px;
+  width: 52px;
   height: 20px;
   position: relative;
 }
 .container .flexbox .color-container button {
   background: #545454;
   height: 20px;
-  width: 20px;
+  width: 16px;
   cursor: pointer;
 }
 .container .flexbox .color-container button img {
-  height: 12px;
+  height: 11px;
 }
 .container .flexbox .add-btn {
   font-family: "Roboto", sans-serif;
@@ -64,6 +64,7 @@
   color: #fff;
   background: transparent;
   width: 100px;
+  height: 120px;
   cursor: pointer;
 }
 
