@@ -3,11 +3,14 @@ SendMode Input
 SetWorkingDir %A_ScriptDir% 
 SetBatchLines, -1
 
+; Menu, Tray, Icon, swatches.ico 
+
 ;Library inclusions
 #Include, lib\neutron.ahk
 #Include, lib\json.ahk
 
 ;FileInstall necessary files
+FileInstall, swatches.ico, swatches.ico
 FileInstall, index.html, index.html
 FileInstall, styles.css, styles.css
 FileInstall, copy.svg, copy.svg
