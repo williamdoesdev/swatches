@@ -34,7 +34,7 @@ mapColors(window){
         mapStr := ""
         for j, jelement in colors
         {
-            mapStr :=  % mapStr . "<div class='color-container'><div style='background-color: #" . colors[j] . "'></div><input id='" . j . "' onChange='ahk.changeColor(event)' value='" . colors[j] . "'></input><button onClick='ahk.copyColor(event)' name='" . j . "'><img src='copy.svg' /></button></div>"
+            mapStr :=  % mapStr . "<div class='color-container'><div style='background-color: #" . colors[j] . "'></div><input id='" . j . "' onChange='ahk.changeColor(event)' value='" . colors[j] . "'></input><button name='" . j . "'><img src='dropper.svg' /></button><button onClick='ahk.copyColor(event)' name='" . j . "'><img src='copy.svg' /></button></div>"
         }
         mapStr := % mapStr . "<button class='add-btn' onclick='ahk.addColor(event)'>+</button>"
         flexbox.innerHTML := mapStr
