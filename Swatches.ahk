@@ -4,8 +4,13 @@ SetWorkingDir %A_ScriptDir%
 SetBatchLines, -1
 
 #Include, lib\neutron.ahk
+#Include, lib\json.ahk
 
 FileInstall, index.html, index.html
+FileInstall, styles.css, styles.css
+FileInstall, copy.svg, copy.svg
+FileInstall, delete.svg, delete.svg
+FileInstall, dropper.svg, dropper.svg
 
 window := new NeutronWindow()
 window.Load("index.html")
@@ -15,6 +20,31 @@ global colors := []
 global colorPickerActive := 0
 global colorPickerSelectedInput := 0
 global colorPickerSelectedIndex := 0
+global currentSwatchPath := ""
+
+openFile(window){
+    FileSelectFile, filePath
+    if(filePath != ""){
+        FileRead, fileContent, %filePath%
+        colors := JSON.Load(fileContent)
+        mapColors(window)
+        currentSwatchPath := filePath
+    }
+}
+
+saveFile(window){
+    DllCall("DeleteFileA", "Str", currentSwatchPath)
+    FileAppend, % JSON.Dump(colors), % currentSwatchPath
+}
+
+saveFileAs(window){
+    FileSelectFile, filepath, S
+    if(filepath != ""){
+        DllCall("DeleteFileA", "Str", filepath)
+        FileAppend, % JSON.Dump(colors), % filepath
+        currentSwatchPath := filePath
+    }
+}
 
 addColor(window, event){
     colors.Push("")
@@ -63,6 +93,10 @@ pickColor(window, event){
         ; BlockInput, Off
     }
     return
+
+#IfWinActive Swatches.exe
+^S::
+    saveFile("")
 
 mapColors(window){
     flexbox := window.doc.getElementById("flexbox")

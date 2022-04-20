@@ -563,6 +563,7 @@ class NeutronWindow
 	Close()
 	{
 		WinClose, % "ahk_id" this.hWnd
+		ExitApp
 	}
 	
 	; Hides the Nuetron window.

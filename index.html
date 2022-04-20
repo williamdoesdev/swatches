@@ -11,6 +11,11 @@
   <body>
     <div class="container" onmousedown="neutron.DragTitleBar()">
       <button class="close-btn" onclick="neutron.Close()">X</button>
+      <div class="menu">
+        <button onClick="ahk.openFile()">Open</button>
+        <button onClick="ahk.saveFile()">Save</button>
+        <button onClick="ahk.saveFileAs()">Save As</button>
+      </div>
       <div class="flexbox" id="flexbox">
         <button class="add-btn" onclick="ahk.addColor(event)">+</button>
       </div>

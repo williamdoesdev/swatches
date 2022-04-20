@@ -20,9 +20,9 @@
     right: 0;
     padding: 10px;
     font-family: "Roboto", sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
-    background: transparent;
+    background: #363636;
     color: #fff;
     cursor: pointer;
     opacity: 0;
@@ -30,6 +30,31 @@
   }
 
   .close-btn:hover {
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    padding: 10px;
+    background: #363636;
+
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+
+    button {
+      color: white;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+
+  .menu:hover {
     opacity: 1;
     transition: opacity 0.25s ease-in-out;
   }
