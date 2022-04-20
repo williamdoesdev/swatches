@@ -228,7 +228,7 @@ class NeutronWindow
 		
 		; Create and save the GUI
 		; TODO: Restore previous default GUI
-		Gui, New, +hWndhWnd +Resize -DPIScale
+		Gui, New, +hWndhWnd +Resize -DPIScale +AlwaysOnTop
 		this.hWnd := hWnd
 		
 		; Enable shadow
