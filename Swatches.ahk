@@ -102,7 +102,7 @@ pickColor(window, event){
         Gui, Margin, 0, 0
         Gui, -Border -SysMenu -Caption -DPIScale +ToolWindow +AlwaysOnTop
         Gui, Add, Picture, , % A_ScriptDir . "\temp.png"
-        Gui, show, W%A_ScreenWidth% h%A_ScreenHeight% y0 AutoSize
+        Gui, show, W%A_ScreenWidth% h%A_ScreenHeight% x0 y0 AutoSize
         DllCall("DeleteFileA", "Str", A_ScriptDir . "\temp.png")
     }
 
