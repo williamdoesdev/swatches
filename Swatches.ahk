@@ -20,7 +20,7 @@ window := new NeutronWindow()
 window.Load("index.html")
 window.Show("w400 h120")
 
-;Global state
+;State
 global colors := []
 global colorPickerActive := 0
 global colorPickerSelectedInput := 0
