@@ -6,6 +6,7 @@ SetBatchLines, -1
 ;Library inclusions
 #Include, lib\neutron.ahk
 #Include, lib\json.ahk
+#Include, lib\capturescreen.ahk
 
 ;FileInstall necessary files
 FileInstall, swatches.ico, swatches.ico
@@ -93,6 +94,17 @@ pickColor(window, event){
         colorPickerActive := 1
         colorPickerSelectedInput.style.background := "red"
         colorPickerSelectedIndex := event.target.name
+
+        ;Give time for input to update and take screenshot
+        sleep, 5
+        CaptureScreen(0, 0, A_ScriptDir . "\temp.png")
+
+        ;Create gui containing screenshot to "freeze" the screen
+        Gui, Margin, 0, 0
+        Gui, -Border -SysMenu -Caption -DPIScale +ToolWindow +AlwaysOnTop
+        Gui, Add, Picture, , % A_ScriptDir . "\temp.png"
+        Gui, show, W%A_ScreenWidth% h%A_ScreenHeight% y0 AutoSize
+        DllCall("DeleteFileA", "Str", A_ScriptDir . "\temp.png")
     }
 
 }
@@ -106,8 +118,7 @@ pickColor(window, event){
         StringTrimLeft, color, longColor, 2
         colors[colorPickerSelectedIndex] := color
         mapColors(window)
-        KeyWait, LButton
-        ; BlockInput, Off
+        Gui, destroy
     }
     return
 
