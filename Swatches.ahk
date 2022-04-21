@@ -9,7 +9,6 @@ SetBatchLines, -1
 #Include, lib\capturescreen.ahk
 
 ;FileInstall necessary files
-FileInstall, swatches.ico, swatches.ico
 FileInstall, index.html, index.html
 FileInstall, styles.css, styles.css
 FileInstall, copy.svg, copy.svg
