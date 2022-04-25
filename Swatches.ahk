@@ -18,7 +18,7 @@ FileInstall, dropper.svg, dropper.svg
 ;Instantiate Neutron window
 window := new NeutronWindow()
 window.Load("index.html")
-window.Show("w400 h140")
+window.Show("w400 h100")
 
 ;State
 global colors := []
