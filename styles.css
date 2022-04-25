@@ -61,7 +61,6 @@
 .container .flexbox .color-container {
   max-width: 100px;
 }
-
 .container .flexbox .color-container div {
   width: 100px;
   height: 80px;
@@ -79,13 +78,13 @@
   width: 20px;
   cursor: pointer;
 }
-.container .flexbox .color-container .big-btn {
+.container .flexbox .color-container .smol-btn .big-btn {
   background: #545454;
   height: 20px;
   width: 33.3px;
   cursor: pointer;
 }
-.container .flexbox .color-container button img {
+.container .flexbox .color-container .smol-btn img {
   height: 11px;
 }
 .container .flexbox .add-btn {
