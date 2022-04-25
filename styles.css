@@ -78,13 +78,13 @@
   width: 20px;
   cursor: pointer;
 }
-.container .flexbox .color-container .smol-btn .big-btn {
+.container .flexbox .color-container .big-btn {
   background: #545454;
   height: 20px;
   width: 33.3px;
   cursor: pointer;
 }
-.container .flexbox .color-container .smol-btn img {
+.container .flexbox .color-container img {
   height: 11px;
 }
 .container .flexbox .add-btn {

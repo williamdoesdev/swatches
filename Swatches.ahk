@@ -14,6 +14,8 @@ FileInstall, styles.css, styles.css
 FileInstall, copy.svg, copy.svg
 FileInstall, delete.svg, delete.svg
 FileInstall, dropper.svg, dropper.svg
+FileInstall, back.svg, back.svg
+FileInstall, forward.svg, forward.svg
 
 ;Instantiate Neutron window
 window := new NeutronWindow()
