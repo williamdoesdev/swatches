@@ -18,7 +18,7 @@ FileInstall, dropper.svg, dropper.svg
 ;Instantiate Neutron window
 window := new NeutronWindow()
 window.Load("index.html")
-window.Show("w400 h100")
+window.Show("w400 h120")
 
 ;State
 global colors := []
@@ -146,7 +146,7 @@ mapColors(window){
         mapStr := ""
         for j, jelement in colors
         {
-            mapStr :=  % mapStr . "<div class='color-container'><div style='background-color: #" . colors[j] . "'></div><input id='" . j . "' onChange='ahk.changeColor(event)' value='" . colors[j] . "'></input><button class='smol-btn' onClick='ahk.deleteColor(event)' name='" . j . "'><img src='delete.svg' /></button><button class='smol-btn' onClick='ahk.pickColor(event)' name='" . j . "'><img src='dropper.svg' /></button><button class='smol-btn' onClick='ahk.copyColor(event)' name='" . j . "'><img src='copy.svg' /></button><button class='big-btn' onclick='ahk.moveColorBack(event)' name='" . j . "'><img src='back.svg' /></button><button class='big-btn' onclick='ahk.moveColorForward(event)' name='" . j . "'><img src='forward.svg' /></button></div>"
+            mapStr :=  % mapStr . "<div class='color-container'><div style='background-color: #" . colors[j] . "'></div><input id='" . j . "' onChange='ahk.changeColor(event)' value='" . colors[j] . "'></input><button class='smol-btn' onclick='ahk.moveColorBack(event)' name='" . j . "'><img src='back.svg' /></button><button class='smol-btn' onclick='ahk.moveColorForward(event)' name='" . j . "'><img src='forward.svg' /></button><button class='big-btn' onClick='ahk.deleteColor(event)' name='" . j . "'><img src='delete.svg' /></button><button class='big-btn' onClick='ahk.pickColor(event)' name='" . j . "'><img src='dropper.svg' /></button><button class='big-btn' onClick='ahk.copyColor(event)' name='" . j . "'><img src='copy.svg' /></button></div>"
         }
         mapStr := % mapStr . "<button class='add-btn' onclick='ahk.addColor(event)'>+</button>"
         flexbox.innerHTML := mapStr

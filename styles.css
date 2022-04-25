@@ -64,25 +64,25 @@
 
 .container .flexbox .color-container div {
   width: 100px;
-  height: 60px;
+  height: 80px;
 }
 .container .flexbox .color-container input {
   background: #545454;
   color: #fff;
-  width: 52px;
+  width: 60px;
   height: 20px;
   position: relative;
 }
 .container .flexbox .color-container .smol-btn {
   background: #545454;
   height: 20px;
-  width: 16px;
+  width: 20px;
   cursor: pointer;
 }
 .container .flexbox .color-container .big-btn {
   background: #545454;
   height: 20px;
-  width: 50px;
+  width: 33.3px;
   cursor: pointer;
 }
 .container .flexbox .color-container button img {
@@ -95,7 +95,7 @@
   color: #fff;
   background: transparent;
   width: 100px;
-  height: 100px;
+  height: 120px;
   cursor: pointer;
 }
 
