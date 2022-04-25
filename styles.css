@@ -58,6 +58,10 @@
   flex-wrap: wrap;
   flex-direction: row;
 }
+.container .flexbox .color-container {
+  max-width: 100px;
+}
+
 .container .flexbox .color-container div {
   width: 100px;
   height: 100px;
@@ -69,10 +73,16 @@
   height: 20px;
   position: relative;
 }
-.container .flexbox .color-container button {
+.container .flexbox .color-container .smol-btn {
   background: #545454;
   height: 20px;
   width: 16px;
+  cursor: pointer;
+}
+.container .flexbox .color-container .big-btn {
+  background: #545454;
+  height: 20px;
+  width: 50px;
   cursor: pointer;
 }
 .container .flexbox .color-container button img {

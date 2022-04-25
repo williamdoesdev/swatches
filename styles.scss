@@ -65,6 +65,8 @@
     flex-direction: row;
 
     .color-container {
+      max-width: 100px;
+
       div {
         width: 100px;
         height: 100px;
@@ -76,11 +78,17 @@
         height: 20px;
         position: relative;
       }
-      button {
+      .smol-btn {
         background: #545454;
         height: 20px;
         width: 16px;
         cursor: pointer;
+      .big-btn {
+        background: #545454;
+        height: 20px;
+        width: 50px;
+        cursor: pointer;
+      }
 
         img {
           height: 11px;
